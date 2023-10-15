@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(MyApp());
 
-  print(9 != 9);
+  // print(9 != 9);
 }
 
 class MyApp extends StatelessWidget {
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
 
   //variables
   String name = 'San.D';
-  int age = 27;
+  int age = 12;
   double pi = 3.14159;
   bool isBeginner = true;
 
@@ -40,9 +40,94 @@ class MyApp extends StatelessWidget {
 
   */
 
+   /*
+   Control Flow
+
+   if(condition){
+     do this;
+   };
+
+
+
+
+   if() {
+
+   } else {
+
+   };
+
+   if(){
+
+   } else if() {
+
+   }
+
+
+
+   Switch case
+   switch() {
+   case 'A':
+   print('Excellent');
+   break;
+   case 'B':
+   print('Very Good');
+   break;
+   default:
+   print('Invalid case');
+   }
+
+
+
+   Loop
+   for (initialization, condition, iteration) {
+
+    }
+
+
+    break - break out of the loop
+    for (initialization, condition, iteration) {
+      if(i == 6);
+      break;
+    }
+
+
+
+    continue - skip the current statement
+     for (initialization, condition, iteration) {
+      if(i == 6);
+      continue;
+    }
+
+
+    while loop - when don't know how many times do the loop going
+    */
+
   @override
   Widget build(BuildContext context) {
-    print(isBeginner || ( age < 18));
+    // if(age < 13){
+    //   print('Minor Alert');
+    // } else if(age < 15){
+    //   print('Minor ++');
+    // } else {
+    //   print('Adult');
+    // }
+
+    // String grade = 'B';
+    // switch(grade) {
+    //   case "A":
+    //     print('Minor --');
+    //     break;
+    //   case "B":
+    //     print('Minor -');
+    //     break;
+    //   default:
+    //     print('Adult');
+    // }
+    int countDown = 5;
+    while(countDown > 0) {
+      print(countDown);
+      countDown--;
+    };
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(),
