@@ -100,7 +100,33 @@ class MyApp extends StatelessWidget {
 
 
     while loop - when don't know how many times do the loop going
+
+
+
+
+    -------------------------------
+    Function/Methods are the same thing
+
+    A organised block of codes we can reusing using function
     */
+
+   //basic function
+   void greet() {
+     print('Hello, there');
+   }
+
+   //function with parameter
+   void greetPerson(String name, int age) {
+     print('Hello ' + name );
+   }
+
+   //function with return type
+   int add(int a, int b) {
+     int sum = a + b;
+     return sum;
+   }
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -123,11 +149,21 @@ class MyApp extends StatelessWidget {
     //   default:
     //     print('Adult');
     // }
-    int countDown = 5;
-    while(countDown > 0) {
-      print(countDown);
-      countDown--;
-    };
+    // int countDown = 5;
+    // while(countDown > 0) {
+    //   print(countDown);
+    //   countDown--;
+    // };
+
+    //basic function
+    // greet();
+
+     //function with parameter
+    // greetPerson('San.D' , 55);
+
+    //function with return type
+    int mySum = add(2, 2);
+    print(mySum);
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(),
