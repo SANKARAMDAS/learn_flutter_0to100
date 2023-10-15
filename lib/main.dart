@@ -7,6 +7,11 @@ void main() {
 class MyApp extends StatelessWidget {
   MyApp({super.key});
 
+  //function & methode
+  void userTap() {
+    print('You tapped here');
+  }
+
   // List<String> names = ['Abc', 'DEF', 'ghi', 'JKL', 'mno', 'PQR'];
 
   @override
@@ -22,28 +27,16 @@ class MyApp extends StatelessWidget {
           leading: Icon(Icons.menu),
           actions: [IconButton(onPressed: () {}, icon: Icon(Icons.logout))],
         ),
-        body: Stack(
-          alignment: Alignment.center,
-          children: [
-            //big box
-            Container(
-              height: 300,
-              width: 300,
-              color: Colors.purple,
+        body: Center(
+          child: GestureDetector(
+            onTap: userTap,
+            child: Container(
+              height: 200,
+              width: 200,
+              color: Colors.deepPurpleAccent,
+              child: Center(child: Text('Tap Here'),),
             ),
-            //medium box
-            Container(
-              height: 150,
-              width: 150,
-              color: Colors.green,
-            ),
-            //small box
-            Container(
-              height: 50,
-              width: 50,
-              color: Colors.yellow,
-            ),
-          ],
+          ),
         )
       ),
     );
