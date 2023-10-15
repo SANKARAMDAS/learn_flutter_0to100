@@ -108,28 +108,67 @@ class MyApp extends StatelessWidget {
     Function/Methods are the same thing
 
     A organised block of codes we can reusing using function
+
+
+
+    --------------------------------------
+    Data Structure- to store variable in a nice way
+    List numbers = [1,2,3];
+    void printNumbers(){
+         for(int i = 0; i <numbers.length; i++){
+            print(numbers[i]);
+         }
+    }
     */
 
    //basic function
-   void greet() {
-     print('Hello, there');
-   }
+   // void greet() {
+   //   print('Hello, there');
+   // }
 
    //function with parameter
-   void greetPerson(String name, int age) {
-     print('Hello ' + name );
-   }
+   // void greetPerson(String name, int age) {
+   //   print('Hello ' + name );
+   // }
 
    //function with return type
-   int add(int a, int b) {
-     int sum = a + b;
-     return sum;
-   }
+   // int add(int a, int b) {
+   //   int sum = a + b;
+   //   return sum;
+   // }
+
+   //Data Structure
+   // List<int> numbers = [1,2,3];  //List is collections of elements, can have duplicates
+
+   // List<String> namess = ['Abi', 'Oberoy', 'Lanka'];
+   //
+   // void printNumbers(){
+   //   for(int i = 0; i <numbers.length; i++){
+   //     print(numbers[i]);
+   //   }
+   // }
+   // void printNames(){
+   //   for(int i = 0; i<namess.length; i++){
+   //     print(namess[i]);
+   //   }
+   // }
+
+   //SET: Unordered collections of unique elements
+   Set<String> uniqueNames= {'Abi', 'Oberoy', 'Lanka'};
 
 
+   //MAP: stored as ket-value pairs
+   Map user = {
+     'name': 'San.D',
+     'age': 22,
+     'height': 100,
+   };
 
   @override
   Widget build(BuildContext context) {
+    print(user['age']);
+     // printNumbers();
+     // printNames();
     // if(age < 13){
     //   print('Minor Alert');
     // } else if(age < 15){
@@ -162,8 +201,9 @@ class MyApp extends StatelessWidget {
     // greetPerson('San.D' , 55);
 
     //function with return type
-    int mySum = add(2, 2);
-    print(mySum);
+    // int mySum = add(2, 2);
+    // print(mySum);
+
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(),
