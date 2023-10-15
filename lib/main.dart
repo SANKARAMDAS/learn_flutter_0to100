@@ -22,14 +22,29 @@ class MyApp extends StatelessWidget {
           leading: Icon(Icons.menu),
           actions: [IconButton(onPressed: () {}, icon: Icon(Icons.logout))],
         ),
-        body: GridView.builder(
-          itemCount: 64,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4),
-          itemBuilder: (context, index) => Container(
-            color: Colors.purpleAccent,
-            margin: EdgeInsets.all(10.0),
-          ),
-        ),
+        body: Stack(
+          alignment: Alignment.center,
+          children: [
+            //big box
+            Container(
+              height: 300,
+              width: 300,
+              color: Colors.purple,
+            ),
+            //medium box
+            Container(
+              height: 150,
+              width: 150,
+              color: Colors.green,
+            ),
+            //small box
+            Container(
+              height: 50,
+              width: 50,
+              color: Colors.yellow,
+            ),
+          ],
+        )
       ),
     );
   }
