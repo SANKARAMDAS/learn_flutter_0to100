@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:learn_flutter_0to100/pages/second_page.dart';
 
 class FirstPage extends StatelessWidget {
   const FirstPage({super.key});
@@ -10,17 +9,39 @@ class FirstPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('1\'st Page'),
       ),
-      body: Center(
-        child: ElevatedButton(
-          child: Text('Go th the 2nd page'),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => SecondPage(),
-              ),
-            );
-          },
+      drawer: Drawer(
+        backgroundColor: Colors.deepPurple[100],
+        child: Column(
+          children: [
+            DrawerHeader(
+                child: Icon(
+              Icons.favorite,
+              size: 40.0,
+              color: Colors.red,
+            ),),
+            ListTile(
+              leading: Icon(Icons.person),
+              title: Text('Profile'),
+              onTap: (){
+                //pop the drawer(history)
+                Navigator.pop(context);
+
+                //Navigate the profile
+                Navigator.pushNamed(context, '/profilepage');
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.settings),
+              title: Text('Settings'),
+              onTap: (){
+                //pop the drawer(history)
+                Navigator.pop(context);
+
+                //Navigate to settings page
+                Navigator.pushNamed(context, '/settingspage');
+              },
+            ),
+          ],
         ),
       ),
     );

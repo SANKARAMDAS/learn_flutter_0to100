@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learn_flutter_0to100/pages/first_page.dart';
+import 'package:learn_flutter_0to100/pages/profile_page.dart';
+import 'package:learn_flutter_0to100/pages/settings_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,7 +21,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: FirstPage()
+      home: FirstPage(),
+      routes: {
+        '/firstpage': (context) => FirstPage(),
+        '/profilepage': (context) => ProfilePage(),
+        '/settingspage': (context) => SttingsPage(),
+      },
     );
   }
 }
